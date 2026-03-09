@@ -120,6 +120,7 @@ public class pos extends Application{
             //ktra bang nhau 
             if(passchecked != null && passchecked.equals(pass)){
                 System.out.println("đăng nhập thành công bởi nhân viên có ID: " + id); 
+                  // chuyen trang 
                 Platform.runLater(()-> loadhomepage());
                 return "Logined successful";  
             }
