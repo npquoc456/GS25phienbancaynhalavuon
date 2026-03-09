@@ -154,36 +154,46 @@
         document.getElementById("icontichdiem").onclick = function(){
             document.getElementById("overlaytichdiemactive").style.display = "flex";
         }
-        document.getElementById("overlaytichdiemactive").onclick = function(){
-            document.getElementById("overlaytichdiemactive").style.display = "none";
+        document.getElementById("overlaytichdiemactive").onclick = function(event){
+            if(event.target === this) {
+                this.style.display = "none";
+            }
         }
         //don hang online
         document.getElementById("icononlinebill").onclick = function(){
             document.getElementById("overlaydonolineactive").style.display = "flex";
         }
-        document.getElementById("overlaydonolineactive").onclick = function(){
-            document.getElementById("overlaydonolineactive").style.display = "none";
+        document.getElementById("overlaydonolineactive").onclick = function(event){
+            if(event.target === this) {
+                this.style.display = "none";
+            }
         }
         //tim don hang
         document.getElementById("timdonhang").onclick = function(){
             document.getElementById("overlaytimdonhangactive").style.display = "flex";
         }
-        document.getElementById("overlaytimdonhangactive").onclick = function(){
-            document.getElementById("overlaytimdonhangactive").style.display = "none";
+        document.getElementById("overlaytimdonhangactive").onclick = function(event){
+            if(event.target === this) {
+                this.style.display = "none";
+            }
         }
         //tim san pham
         document.getElementById("timsanpham").onclick = function(){
             document.getElementById("overlaytimsanphamactive").style.display = "flex";
         }
-        document.getElementById("overlaytimsanphamactive").onclick = function(){
-            document.getElementById("overlaytimsanphamactive").style.display = "none";
+        document.getElementById("overlaytimsanphamactive").onclick = function(event){
+            if(event.target === this) {
+                this.style.display = "none";
+            }
         }
         //ho tro
         document.getElementById("hotro").onclick = function(){
             document.getElementById("overlayhotroactive").style.display = "flex";
         }
-        document.getElementById("overlayhotroactive").onclick = function(){
-            document.getElementById("overlayhotroactive").style.display = "none";
+        document.getElementById("overlayhotroactive").onclick = function(event){
+            if(event.target === this) {
+                this.style.display = "none";
+            }
         }
         //xuat ra ten nhan vien va id 
         function laytennhanvien(){
