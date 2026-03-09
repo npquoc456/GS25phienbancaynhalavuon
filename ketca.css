@@ -77,7 +77,7 @@
                 .container .thongtinsotien {
                     grid-area: left;
                     
-                    background-color: rgb(255, 255, 255);
+                    background-color: #ffffff;
                     width: 98%;
                     justify-self: right; 
                     height: 95%;
@@ -89,14 +89,15 @@
                     display: grid; 
                     border-style: dashed;
                     border-width: 1px;
-                    border-color: rgb(148, 148, 148);
+                    border-color: rgb(215, 215, 215);
                 }
                 .container .thongtinsotien2 .thongtintientext {
                     justify-self: center;
-                    align-self: center;
+                    align-self: self-end;
                     font-size: 24px;
                         font-family: arial;
                         font-weight: bold;
+
 
                 }
                 .container .thongtinsotien2{
@@ -117,12 +118,12 @@
                         border-collapse: collapse; /* Gộp viền bảng lại */
                         font-family: Arial, sans-serif;
                         font-size: 16px;
-                        margin: 20px auto; /* Ra giữa màn hình */
+                        margin: 10px auto; /* Ra giữa màn hình */
                     }
 
                     .currency-table th, .currency-table td {
                         border: 1px solid #a6a6a6; /* Màu viền xám nhạt */
-                        padding: 10px 15px;
+                        padding: 10px 10px;
                     }
                             .currency-table th {
                                 font-size: 24px;
@@ -138,6 +139,7 @@
 
                     /* Căn lề cho từng cột */
                     .col-value {
+        
                         text-align: right;
                         width: 35%;
                         font-size: x-large;
@@ -169,21 +171,25 @@
 
                     }
                     .container .thongtinsotien2 .nutxacnhanbangke {
-
+                        margin-top: 30px;
                         display: flex;
                         justify-content: space-between;
                         width: 60%;
-                        justify-self: self-start;
+                        justify-self: self-end;
                         margin-left: 37%;
+
+                        height: 70px;
                     }
                     .container .thongtinsotien2 .nutxacnhanbangke button.xacnhan{
-                        margin-top: 10px;
-                        border-radius: 10px;
+                        height: 100%;
+                        align-self: self-end;
+                        border-radius: 15px;
                         font-size: 28px;
                         font-family: arial;
                         font-weight: bold;
                         color: white;
                         border: none;
+
                          box-shadow: 4px 4px 15px rgba(52, 51, 51, 0.6); 
                          transition: 0.3s;
 
@@ -210,6 +216,6 @@
                     background-color: white;
                     border-style: dashed;
                     border-width: 1px;
-                    border-color: rgb(148, 148, 148);
+                    border-color: rgb(215, 215, 215);
 
                 }
