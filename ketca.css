@@ -1,0 +1,204 @@
+    body{
+            overflow: hidden; /*khong luot doc dc*/
+            background-color: #97CADB ;
+            height: 100vh;
+            margin: 0;
+            display: grid;
+            grid-template-areas: "emty" 
+                                "text" 
+                                "mainboard";
+            grid-template-rows: 110px 40px 1fr; 
+        }
+        .text {
+            justify-self: center; 
+            grid-area: text;
+            width: 80%;
+            height: 100%;
+            margin-top: -1px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+
+            font-size: 24px;
+            font-family: Arial;
+            font-weight: bold;
+        }
+        .text1 {
+            margin: 0; 
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .taskbar {
+            justify-self: center; 
+            width: 80%;
+            grid-area: text;
+            margin-top: -15px; 
+    
+
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none; /* Để có thể click xuyên qua ô trắng vào chữ */
+        }
+
+        .choose{
+            background-color: #D6E7EE;
+            width: 200px;
+             height: 100px; 
+
+            border-radius: 15px;
+            z-index: -1; /* Đẩy ra sau chữ */
+            box-shadow: 4px 4px 15px rgba(52, 51, 51, 0.6); 
+        }
+        .container {
+            background-color: #D6E7EE;
+            grid-area: mainboard;
+            justify-self: center; 
+            width: 90%;
+            height: 100%; 
+            border-radius: 19px;
+            box-shadow: 4px 4px 15px rgba(52, 51, 51, 0.6); 
+
+            /*bo cuc cho phan container*/
+            display: grid;
+            grid-template-areas: "left right";
+            grid-template-columns: 3fr 1fr;
+
+            gap: 2%;
+        }
+                .container .thongtinsotien {
+                    grid-area: left;
+                    
+                    background-color: white;
+                    width: 98%;
+                    justify-self: right; 
+                    height: 95%;
+                    margin-top: 2%;
+                    align-self: self-start;
+                    border-radius: 10px;
+                    box-shadow: 4px 4px 15px rgba(52, 51, 51, 0.6); 
+
+                    display: grid; 
+                    
+
+                }
+                .container .thongtinsotien2 .thongtintientext {
+                    justify-self: center;
+                    align-self: center;
+                    font-size: 24px;
+                        font-family: arial;
+                        font-weight: bold;
+
+                }
+                .container .thongtinsotien2{
+
+                    display: grid;
+                    grid-template-rows: 0px 1fr 0.3fr 1fr;
+                    width: 92%;
+                    height: 0%;
+                    margin-top: 4%;
+                    justify-self: center;
+                    align-self: self-start;
+                    gap: 5%;
+                }
+                /*bang ke */
+
+                    .currency-table {
+                        width: 100%;
+                        border-collapse: collapse; /* Gộp viền bảng lại */
+                        font-family: Arial, sans-serif;
+                        font-size: 16px;
+                        margin: 20px auto; /* Ra giữa màn hình */
+                    }
+
+                    .currency-table th, .currency-table td {
+                        border: 1px solid #a6a6a6; /* Màu viền xám nhạt */
+                        padding: 10px 15px;
+                    }
+                            .currency-table th {
+                                font-size: 24px;
+                                font-family: arial;
+                            }
+
+                    .currency-table th {
+                        background-color: #183D7B; /* Xanh navy giống ảnh */
+                        color: white;
+                        text-align: center;
+                        font-weight: bold;
+                    }
+
+                    /* Căn lề cho từng cột */
+                    .col-value {
+                        text-align: right;
+                        width: 35%;
+                        font-size: x-large;
+                    }
+
+                    .col-qty , input.input-qty{
+                        text-align: center;
+                        width: 20%;
+                        font-size: x-large;
+                        border: none;
+                    }
+
+                    .col-total {
+                        text-align: right;
+                        width: 35%;
+                        font-size: x-large;
+                    }
+                    /*tong tien*/
+                    .container .thongtinsotien2 .tinhtongtientrongbang {
+                        display: grid;
+                        grid-template-areas: "textthongtiendchien consodchien" ;
+                        grid-template-columns: 1fr 1.6fr;
+                    }
+                    .container .thongtinsotien2 .tinhtongtientrongbang span.texttongtien{
+                        font-size: 28px;
+                        font-family: arial;
+                        font-weight: bold;
+                        color: rgb(164, 1, 1);
+
+                    }
+                    .container .thongtinsotien2 .nutxacnhanbangke {
+
+                        display: flex;
+                        justify-content: space-between;
+                        width: 60%;
+                        justify-self: self-start;
+                        margin-left: 37%;
+                    }
+                    .container .thongtinsotien2 .nutxacnhanbangke button.xacnhan{
+                        border-radius: 20px;
+                        font-size: 28px;
+                        font-family: arial;
+                        font-weight: bold;
+                        color: white;
+                        border: none;
+                         box-shadow: 4px 4px 15px rgba(52, 51, 51, 0.6); 
+                         transition: 0.3s;
+                    }
+
+                    .container .thongtinsotien2 .nutxacnhanbangke button.xacnhan:hover{
+                        transform: scale(1.03);
+                    }
+                    .container .thongtinsotien2 .nutxacnhanbangke button.xacnhan:active{
+                         transform: scale(1.05);
+                         opacity: 0.6;
+                    }
+
+                        
+                .container .thongtintienonline {
+                    grid-area: right;
+    
+
+                    width: 93%;
+                    justify-self: left; 
+                    height: 95%;
+                    margin-top: 6%;
+                    align-self: self-start;
+                    border-radius: 10px;
+                    box-shadow: 0px 0px 15px rgba(52, 51, 51, 0.6); 
+                    background-color: white;
+
+                }

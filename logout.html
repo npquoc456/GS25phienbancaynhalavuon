@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #97CADB ;
+            height: 100vh;
+            margin: 0;
+            display: grid;
+            grid-template-areas: "emty" 
+                                "text" 
+                                "mainboard";
+            grid-template-rows: 110px 40px 1fr; 
+        }
+        .container {
+            background-color: #D6E7EE;
+            grid-area: mainboard;
+            justify-self: center; 
+            width: 94%;
+            height: 100%; 
+            border-radius: 19px;
+            box-shadow: 4px 4px 15px rgba(52, 51, 51, 0.6); 
+        }
+        .text {
+            justify-self: center; 
+            grid-area: text;
+            width: 80%;
+            height: 100%;
+            margin-top: -1px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+
+            font-size: 24px;
+            font-family: Arial;
+            font-weight: bold;
+        }
+        .text1 {
+            margin: 0; 
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .taskbar {
+            justify-self: center; 
+            width: 80%;
+            grid-area: text;
+            margin-top: -15px; 
+    
+
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none; /* Để có thể click xuyên qua ô trắng vào chữ */
+        }
+
+        .choose{
+            background-color: #D6E7EE;
+            width: 200px;
+             height: 100px; 
+
+            border-radius: 15px;
+            z-index: -1; /* Đẩy ra sau chữ */
+            box-shadow: 4px 4px 15px rgba(52, 51, 51, 0.6); 
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="taskbar">
+        <div class="choose" id="choose" style="visibility: hidden;"></div>
+        <div class="choose" id="choose" style="visibility: hidden;"></div>
+        <div class="choose" id="choose" style="visibility: hidden;"></div>
+        <div class="choose" id="choose"></div>
+    </div>
+        
+    </div>
+    <div class="text">
+        <p class="text1" onclick="clickpage('1')">TRANG CHỦ</p>
+        <p class="text1" onclick="clickpage('2')">KẾT CA</p>
+        <p class="text1" onclick="clickpage('3')">TIỆN ÍCH</p>
+        <p class="text1" onclick="clickpage('4')">ĐĂNG XUẤT</p>
+    </div>
+    <div class="container">
+    </div>
+    </div>
+    <script>
+        function clickpage(index) {
+                app.choose(index); 
+        }
+    </script>
+</body>
+</html>

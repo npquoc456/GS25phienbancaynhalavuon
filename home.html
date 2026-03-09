@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="infor">
+       
+    </div>
+
+    <div class="taskbar">
+        <div class="choose" id="choose" ></div>
+        <div class="choose" id="choose" style="visibility: hidden"></div>
+        <div class="choose" id="choose" style="visibility: hidden;"></div>
+        <div class="choose" id="choose" style="visibility: hidden;"></div>
+    </div>
+        
+    </div>
+    <div class="text">
+        <p class="text1" onclick="clickpage('1')">TRANG CHỦ</p>
+        <p class="text1" onclick="clickpage('2')">KẾT CA</p>
+        <p class="text1" onclick="clickpage('3')">TIỆN ÍCH</p>
+        <p class="text1" onclick="clickpage('4')">ĐĂNG XUẤT</p>
+    </div>
+    <div class="container">
+        <div class="vungtimsp">
+            <div class="taskbar">
+                <input type="text" placeholder="Nhập ID hoặc tên sản phẩm">
+                <div class="taskbarinfor">Đơn giá </div>
+                <div class="taskbarinfor">Số lượng</div>
+                <div class="taskbarinfor">Giảm giá</div>
+                <div class="taskbarinfor">Thành tiền</div>
+                <div class="taskbarinfor"> Ghi chú</div>
+            </div>
+            <div class="vunghiensp"></div>
+            <div class="vungkhuyenmai"></div>
+        </div>
+        <div class="vunghienicon">
+            <p class="thanhtoantext">Thanh toán</p>
+            <div class="showiconreal">
+                <div class="icons" id="icontichdiem">
+                    <img src="Gemini_Generated_Image_eyw4bweyw4bweyw4 (1).png" alt="">
+                    <div class="text3">Tích điểm</div>
+                </div>
+                <div class="icons">
+                    <img src="onlinebill (2) (1).png" alt=""">
+                    <div class="text3">Đơn online</div>
+                </div><div class="icons">
+                    <img src="findbill (1).png" alt="">
+                    <div class="text3">Tìm Hóa Đơn</div>
+                </div><div class="icons">
+                    <img src="cancelbill.png" alt="" >
+                    <div class="text3">Hủy Hóa Đơn</div>
+                </div><div class="icons">
+                    <img src="find (1) (1).png" alt="" >
+                    <div class="text3">Tìm Sản Phẩm</div>
+                </div><div class="icons">
+                    <img src="support (1).png" alt="">
+                    <div class="text3">Hỗ Trợ</div>
+                </div>
+            </div>
+        </div>
+        <div class="vunghiensotien">
+            <div class="containersotien">
+                <div class="totalinfor"> <span style="color: rgb(116, 116, 243);">TỔNG CỘNG:</span> <span></span></div>
+                <div class="totalinfor"><span style="color: rgb(163, 163, 2);">GIẢM GIÁ:</span></div>
+                <div class="line"></div>
+                <div class="totalinfor"> <span style="color: red;">THÀNH TIỀN:</span></div>
+                <button class="thanhtoanbtn"> THANH TOÁN</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!--vung hien cua tich diem -->
+    <div class="overlaytichdiem" id="overlaytichdiemactive">
+        <div class="containertichdiem">
+            <div class="taskbartichdiem" style="
+            display: flex; ;
+                color: white; justify-content: center; align-items: center; 
+                font-size: 38px; font-weight: bold; color: white;
+                 font-family: arial;"
+            > TÍCH ĐIỂM</div>
+            <div class="maincuatichdiem">
+                <p class="nhapsodienthoaitichdiem" style="align-self: flex-end;">Số điện thoại tích điểm</p>
+                <input type="text" class="nhapsdt" placeholder="Nhập số điện thoại" style="
+                        margin-top: -5%;
+                        height: 80%;
+
+                        font-size: 24px;
+                        border-radius: 20px;
+                        border-style: solid;
+                        border-color: rgb(145, 145, 145);
+                ">
+                <div class="nutbamtichdiem" style="
+                        align-self: flex-start;
+                        justify-self: center;
+                        display: flex;
+                        justify-content: space-between;
+
+                        width: 70%;
+                        height: 40%;
+                ">
+                    <button class="tichdiembtn" style="
+                            width: 40%; font-size: 32px; font-weight: bold; color: white; background-color: rgb(221, 3, 3);
+                            font-family: arial; border-radius: 20px; border: none;
+                             box-shadow: 0px 0px 5px rgba(52, 51, 51, 0.6); 
+                             transition: 0.3s;
+                        " id ="thoattrangtichdiem">Hủy</button>
+                    <button class="tichdiembtn"  style="
+                    width: 40%; font-size: 32px; font-weight: bold; color: white;background-color: rgb(0, 0, 181);
+                            font-family: arial; border-radius: 20px; border: none;
+                             box-shadow: 0px 0px 5px rgba(52, 51, 51, 0.6); 
+                             transition: 0.3s;
+                    ">Xác Nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--don hang online -->
+    <script>
+        function clickpage(index) {
+                app.choose(index); 
+        }
+        document.getElementById("icontichdiem").onclick = function(){
+            document.getElementById("overlaytichdiemactive").style.display = "flex";
+        }
+        document.getElementById("thoattrangtichdiem").onclick = function (){
+            document.getElementById("overlaytichdiemactive").style.display = "none";
+        }
+    </script>
+</body>
+</html>
