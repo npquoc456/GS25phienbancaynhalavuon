@@ -147,7 +147,7 @@ public class pos extends Application{
         loadloginpage();
 
        // stage.setTitle("Conveniencepos");
-        stage.setScene(new Scene(webView, 1440, 1024)); 
+        stage.setScene(new Scene(webView, 1480, 1024)); 
         stage.show();
     }
     //load cac trang 

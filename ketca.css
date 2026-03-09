@@ -1,6 +1,6 @@
     body{
             overflow: hidden; /*khong luot doc dc*/
-            background-color: #97CADB ;
+            background-color: #f0f6fc;
             height: 100vh;
             margin: 0;
             display: grid;
@@ -24,11 +24,20 @@
             font-family: Arial;
             font-weight: bold;
         }
+        
         .text1 {
             margin: 0; 
             width: 200px;
             text-align: center;
             cursor: pointer;
+            padding: 10px;
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            margin-top: -10px;
+        }
+        .text1:active {
+            color: #005b9f;
+            background-color: rgba(0, 91, 159, 0.1);
         }
         .taskbar {
             justify-self: center; 
@@ -41,24 +50,22 @@
             justify-content: space-between;
             pointer-events: none; /* Để có thể click xuyên qua ô trắng vào chữ */
         }
-
+        /*nut di chuyển*/
         .choose{
-            background-color: #D6E7EE;
+            background-color: #ffffff;
             width: 200px;
-             height: 100px; 
+             height: 70px; 
 
             border-radius: 15px;
             z-index: -1; /* Đẩy ra sau chữ */
-            box-shadow: 4px 4px 15px rgba(52, 51, 51, 0.6); 
         }
         .container {
-            background-color: #D6E7EE;
+            background-color: #ffffff;
             grid-area: mainboard;
             justify-self: center; 
-            width: 90%;
+            width: 94%;
             height: 100%; 
             border-radius: 19px;
-            box-shadow: 4px 4px 15px rgba(52, 51, 51, 0.6); 
 
             /*bo cuc cho phan container*/
             display: grid;
@@ -70,18 +77,19 @@
                 .container .thongtinsotien {
                     grid-area: left;
                     
-                    background-color: white;
+                    background-color: rgb(255, 255, 255);
                     width: 98%;
                     justify-self: right; 
                     height: 95%;
                     margin-top: 2%;
                     align-self: self-start;
                     border-radius: 10px;
-                    box-shadow: 4px 4px 15px rgba(52, 51, 51, 0.6); 
+ 
 
                     display: grid; 
-                    
-
+                    border-style: dashed;
+                    border-width: 1px;
+                    border-color: rgb(148, 148, 148);
                 }
                 .container .thongtinsotien2 .thongtintientext {
                     justify-self: center;
@@ -94,13 +102,13 @@
                 .container .thongtinsotien2{
 
                     display: grid;
-                    grid-template-rows: 0px 1fr 0.3fr 1fr;
+                    grid-template-rows: 3px 1fr 0.4fr 0.3fr;
                     width: 92%;
                     height: 0%;
                     margin-top: 4%;
                     justify-self: center;
                     align-self: self-start;
-                    gap: 5%;
+                    gap: 1%;
                 }
                 /*bang ke */
 
@@ -122,7 +130,7 @@
                             }
 
                     .currency-table th {
-                        background-color: #183D7B; /* Xanh navy giống ảnh */
+                        background-color: #005b9f; /* Xanh navy giống ảnh */
                         color: white;
                         text-align: center;
                         font-weight: bold;
@@ -169,7 +177,8 @@
                         margin-left: 37%;
                     }
                     .container .thongtinsotien2 .nutxacnhanbangke button.xacnhan{
-                        border-radius: 20px;
+                        margin-top: 10px;
+                        border-radius: 10px;
                         font-size: 28px;
                         font-family: arial;
                         font-weight: bold;
@@ -177,6 +186,7 @@
                         border: none;
                          box-shadow: 4px 4px 15px rgba(52, 51, 51, 0.6); 
                          transition: 0.3s;
+
                     }
 
                     .container .thongtinsotien2 .nutxacnhanbangke button.xacnhan:hover{
@@ -191,14 +201,15 @@
                 .container .thongtintienonline {
                     grid-area: right;
     
-
                     width: 93%;
                     justify-self: left; 
                     height: 95%;
                     margin-top: 6%;
                     align-self: self-start;
                     border-radius: 10px;
-                    box-shadow: 0px 0px 15px rgba(52, 51, 51, 0.6); 
                     background-color: white;
+                    border-style: dashed;
+                    border-width: 1px;
+                    border-color: rgb(148, 148, 148);
 
                 }

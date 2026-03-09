@@ -1,5 +1,5 @@
- body{
-            background-color: #97CADB ;
+        body{
+             background-color: #f0f6fc;
             height: 100vh;
             margin: 0;
             display: grid;
@@ -23,11 +23,20 @@
             font-family: Arial;
             font-weight: bold;
         }
+        
         .text1 {
             margin: 0; 
             width: 200px;
             text-align: center;
             cursor: pointer;
+            padding: 10px;
+            transition: all 0.3s ease;
+            border-radius: 12px;
+            margin-top: -10px;
+        }
+        .text1:active {
+            color: #005b9f;
+            background-color: rgba(0, 91, 159, 0.1);
         }
         .taskbar {
             justify-self: center; 
@@ -42,23 +51,21 @@
         }
         /*nut di chuyển*/
         .choose{
-            background-color: #D6E7EE;
+            background-color: #ffffff;
             width: 200px;
-             height: 100px; 
+             height: 70px; 
 
             border-radius: 15px;
             z-index: -1; /* Đẩy ra sau chữ */
-            box-shadow: 4px 4px  15px rgba(52, 51, 51, 0.6); 
         }
         /*phan main */
         .container {
-            background-color: #D6E7EE;
+            background-color: #ffffff;
             grid-area: mainboard;
             justify-self: center; 
             width: 94%;
             height: 100%; 
-            border-radius: 19px;
-            box-shadow: 4px 4px 15px rgba(52, 51, 51, 0.6); 
+            border-radius: 19px; 
 
             /*chia bo cuc */
             display: grid;
@@ -75,30 +82,30 @@
             justify-self: center; 
             align-self: self-end;
 
-            background-color: white;
+            background-color: rgb(255, 255, 255);
             border-radius: 9px;
-             box-shadow: 0px 0px  15px rgba(52, 51, 51, 0.6); 
-
              display: grid;
              grid-template-areas: "bar" "show2" "sale";
              grid-template-rows: 1fr 8fr 4fr;
+             gap: 20px; 
 
         }
                 .container .vungtimsp .taskbar{
                     grid-area: bar;
+                    margin-top: 10px;
                     z-index: 1;
-                    width: 100%;
-                    height: 100%;
+                    width: 98%;
+                    height: 92%;
                     align-self: self-end;
 
-                    background-color: #02457A;
+                    background-color: #005b9f;
                     border-radius: 10px;
 
                     display: grid;
                     grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
                     justify-items: center;
                     align-items: center;
-                    gap: 1%;
+                    gap: 3%;
 
                     color: white;
                     font-size: 20px;
@@ -118,10 +125,11 @@
                         }
 
                 .container .vungtimsp .vunghiensp{
+                    background-color:  #f0f6fc;
                     grid-area: show2;
-                    border-style: solid ;
-                    border-width: 2px;
-                    border-color: #c1c1c1;
+                    border-style: dashed ;
+                    border-width: 1px;
+                    border-color: #dadada;
 
                     width: 97%;
                     height: 100%;
@@ -133,9 +141,16 @@
                 .container .vungtimsp .vungkhuyenmai{
                     grid-area: sale;
 
-                    width: 100%;
+                    border-radius: 9px;
+
+                    width: 97%;
                     height: 100%;
                     align-self: self-end;
+                     border-style: dashed ;
+                    border-width: 1px;
+                    
+                    border-color: #dadada;
+                    justify-self: center;
 
                 }
 
@@ -146,9 +161,8 @@
             justify-self: left;  
             align-self: self-end;
             
-            background-color: #02457A;
-            border-radius: 9px;
-            box-shadow: 0px 0px  15px rgba(52, 51, 51, 0.6); 
+            background-color: #005b9f;
+            border-radius: 9px; 
 
             display: grid;
             grid-template-areas: "showtexticon" "showicons";
@@ -185,22 +199,21 @@
                         
                     }
                             .container .vunghienicon .showiconreal .icons{
-                                background-color: #5889C8;
+                                background-color: rgba(255,255,255,0.15);
                                 border-radius: 10px;
 
                                 grid-template-areas: "imgarea" "texticon";
                                 grid-template-rows: 3fr 1fr;
                                 align-content:  center;
                                 justify-content: center;
-                                transition: 0.3s;
+                                transition: all 0.2s ease;
                             }
                             .container .vunghienicon .showiconreal .icons:hover{
-                                background-color:  #6fa3e6;
-                                transform: scale(1.04);
-                                box-shadow: 0px 0px 5px rgba(52, 51, 51, 0.6); 
+                                background-color: rgba(255,255,255,0.25);
+                                transform: translateY(-3px);
+                                border: 1px solid rgba(255,255,255,0.4); 
                             }
                             .container .vunghienicon .showiconreal .icons:active{
-                                background-color:  #6fa3e6;
                                 transform: scale(1.06);
                                 box-shadow: 0px 0px 5px rgba(52, 51, 51, 0.6); 
                             }
@@ -235,9 +248,12 @@
             justify-self: left;  
             align-self: self-end;
 
-            background-color: white;
+             border-style: dashed ;
+                border-width: 1px;
+                border-color: #dadada;
+
+            
             border-radius: 9px;
-            box-shadow: 0px 0px  15px rgba(52, 51, 51, 0.6); 
 
             display: grid;
 
@@ -263,7 +279,7 @@
                  .container .vunghiensotien .containersotien button.thanhtoanbtn{
                     height: 50px;
                     width: 200px;
-                    background-color: #02457A;
+                    background-color: #005b9f;
                     border: none;
                     border-radius: 17px;
                     justify-self: right; 
@@ -293,7 +309,7 @@
     z-index: 3;
 
     /*toao bo cuc */
-    display: none;
+    display: none ;
     align-items: center;
     justify-content: center;
 }
@@ -305,34 +321,45 @@
 
             display: grid;
             grid-template-areas: "toptichdiem" "maintichdiem";
-            grid-template-rows: 1fr 7fr;
+            grid-template-rows: 1fr 9fr;
         }
             .overlaytichdiem .containertichdiem .taskbartichdiem {
 
-                background-color: #02457A;
+                background-color:#005b9f; 
                 border-radius: 20px 20px 0 0 ;
                 grid-area: toptichdiem;
                 width: 100%;
                 height: 100%;
             }
-            .overlaytichdiem .containertichdiem .maincuatichdiem {
-                width: 70%;
-                height: 80%;
+.overlaydonoline {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); ; 
+    z-index: 3;
 
-                display: grid;
-                align-self: center;
-                justify-self: center; 
-                gap: 2%;
-                
-                font-size: 32px;
-                font-family: arial;
-                color: black;
-                font-weight: bold;
+    /*toao bo cuc */
+    display: none ;
+    align-items: center;
+    justify-content: center;
+}
+        .overlaydonoline .containerdonoline {
+            width: 1000px;
+            height: 700px;
+            background-color: white;
+            border-radius: 24px;
+
+            display: grid;
+            grid-template-areas: "toptichdiem" "maintichdiem";
+            grid-template-rows: 1fr 9fr;
+        }
+            .overlaydonoline .containerdonoline .taskbardonoline {
+
+                background-color:#005b9f; 
+                border-radius: 20px 20px 0 0 ;
+                grid-area: toptichdiem;
+                width: 100%;
+                height: 100%;
             }
-             .overlaytichdiem .containertichdiem .maincuatichdiem button.tichdiembtn:hover{
-                transform: scale(1.03);
-             }
-             .overlaytichdiem .containertichdiem .maincuatichdiem button.tichdiembtn:active{
-                transform: scale(1.04);
-                opacity: 0.6;
-             }
