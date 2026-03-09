@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="ketca.css">
 </head>
 <body>
+    <div class="inforontotaskbar">
+        <div class="time"></div>
+        <div class="idnnhanvien" style="font-size: 20px; font-weight: bold;">ID: 
+            <span id="idnhanvienhien"></span>
+        </div>
+        <div class="tennhanvien" style="
+              font-size: 20px; font-weight: bold;"
+            >Tên: <span id="tennhanvienhien"> </span></div>
+    </div>
     
     <div class="taskbar">
         <div class="choose" id="choose" style="visibility: hidden"></div>
@@ -134,6 +143,28 @@
                 function clickpage(index) {
                         app.choose(index); 
                 }
+                        function laytennhanvien(){
+
+            let nameemployee = app.getname();
+
+            if(nameemployee != null){
+                document.getElementById("tennhanvienhien").innerHTML = nameemployee; 
+            }
+            else{
+                console.log("nameemployee is null");
+            }
+        }
+        function layidnhanvien(){
+            let idemployee = app.getid();
+
+            if(idemployee != null){
+                document.getElementById("idnhanvienhien").innerHTML = idemployee; 
+            }
+            else{
+                console.log("idemployee is null");
+            }
+         }
+
             </script>
 </body>
 </html>

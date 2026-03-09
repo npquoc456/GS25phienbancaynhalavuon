@@ -10,9 +10,7 @@ import oracle.security.o3logon.WorkBench;
 
 //database
 import java.sql.*;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
+import JAVASCOURE.javacourse.bai1.nhapxuatjava;
 
 public class pos extends Application{
       class connectDB {
@@ -68,6 +66,8 @@ public class pos extends Application{
             }
         });
         }
+        String nameemployee = null; 
+        int idemployee = 0;
         //ktra dang nhap 
         public String checkedLogin(String id, String pass){
 
@@ -108,6 +108,8 @@ public class pos extends Application{
                 if(rs.next()){
                     //lay chuoi o cot mk gan vao 
                     passchecked = rs.getString("Password"); 
+                    nameemployee = rs.getString("hoten");
+                    idemployee = rs.getInt("id");
                 }
 
                 rs.close();
@@ -122,11 +124,21 @@ public class pos extends Application{
                 System.out.println("đăng nhập thành công bởi nhân viên có ID: " + id); 
                   // chuyen trang 
                 Platform.runLater(()-> loadhomepage());
+                getname();
                 return "Logined successful";  
             }
             else{
                 return "ID or Password can be incorrect!"; 
             }
+        }
+        //lay ten 
+        public String getname(){
+            System.out.println("nameemployee: " + nameemployee);
+            return nameemployee;    
+        }
+        //lay id
+        public int getid(){
+            return idemployee;
         }
     }
 
@@ -142,6 +154,11 @@ public class pos extends Application{
             if(newstate == Worker.State.SUCCEEDED){
                 JSObject  window = (JSObject) engine.executeScript("window"); 
                 window.setMember("app", bridge);
+            
+                // Ngay sau khi gắn 'app' thành công, yêu cầu trình duyệt chạy hàm laytennhanvien() (nếu trang đó có hàm này)
+                engine.executeScript("if (typeof laytennhanvien === 'function') { laytennhanvien(); }");
+                engine.executeScript("if (typeof layidnhanvien ==='function'){layidnhanvien();}");
+                
             }
         });
         loadloginpage();

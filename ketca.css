@@ -1,12 +1,11 @@
-    body{
-            overflow: hidden; /*khong luot doc dc*/
-            background-color: #f0f6fc;
+     body{
+             background-color: #f0f6fc;
             height: 100vh;
             margin: 0;
             display: grid;
-            grid-template-areas: "emty" 
-                                "text" 
-                                "mainboard";
+            grid-template-areas: "emty1 emty2" 
+                                "text text" 
+                                "mainboard mainboard";
             grid-template-rows: 110px 40px 1fr; 
         }
         .text {
@@ -219,3 +218,29 @@
                     border-color: rgb(215, 215, 215);
 
                 }
+body .inforontotaskbar{
+    margin-top: 10px;
+    margin-left: 10px;
+    grid-area: emty1;
+    height: 80%;
+    width: 700px;
+
+    display: grid;
+    grid-template-areas: "time" "idnnhanvien" "tennhanvien";
+    grid-template-rows: 1.3fr 1fr 1fr;
+    justify-content: start;
+    align-items: center;
+}
+body .inforontotaskbar .time{
+    grid-area: time;
+    justify-self: center;
+    font-size: 20px;
+    font-family: arial;
+    font-weight: bold;
+
+    width: 300px;
+    height: 100%;
+
+    background-color: #005b9f;
+    border-radius: 10px;
+}

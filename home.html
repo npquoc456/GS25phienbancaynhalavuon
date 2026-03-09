@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <div class="infor">
-       
+    <div class="inforontotaskbar">
+        <div class="time"></div>
+        <div class="idnnhanvien" style="font-size: 20px; font-weight: bold;">ID: 
+            <span id="idnhanvienhien"></span>
+        </div>
+        <div class="tennhanvien" style="
+              font-size: 20px; font-weight: bold;"
+            >Tên: <span id="tennhanvienhien"> </span></div>
     </div>
 
     <div class="taskbar">
@@ -48,16 +54,16 @@
                 <div class="icons" id="icononlinebill">
                     <img src="onlinebill (2) (1).png" alt=""">
                     <div class="text3">Đơn online</div>
-                </div><div class="icons">
+                </div><div class="icons" id ="timdonhang" >
                     <img src="findbill (1).png" alt="">
                     <div class="text3">Tìm Hóa Đơn</div>
-                </div><div class="icons">
+                </div><div class="icons" id="huyhoadon">
                     <img src="cancelbill.png" alt="" >
                     <div class="text3">Hủy Hóa Đơn</div>
-                </div><div class="icons">
-                    <img src="find (1) (1).png" alt="" >
+                </div><div class="icons" id = "timsanpham">
+                    <img src="find (1) (1).png" alt="">
                     <div class="text3">Tìm Sản Phẩm</div>
-                </div><div class="icons">
+                </div><div class="icons" id = "hotro">
                     <img src="support (1).png" alt="">
                     <div class="text3">Hỗ Trợ</div>
                 </div>
@@ -100,6 +106,46 @@
         </div>
     </div>
     <!--tim hon hang -->
+    <div class="overlaytimdonhang" id="overlaytimdonhangactive">
+        <div class="containertimdonhang">
+            <div class="taskbartimdonhang"> TÌM HÓA ĐƠN </div>
+            <div class="maincuatimdonhang">
+                <!--tich diem -->
+
+
+
+            </div>
+        </div>
+    </div>
+<!--timsanpham-->
+  <div class="overlaytimsanpham" id="overlaytimsanphamactive">
+        <div class="containertimsanpham">
+            <div class="taskbartimsanpham"> TÌM SẢN PHẨM </div>
+
+            <div class="maincuatimsanpham">
+                <!--tich diem -->
+
+
+
+            </div>
+        </div>
+    </div>
+<!--ho tro-->
+    <div class="overlayhotro" id="overlayhotroactive">
+        <div class="containerhotro">
+
+            <div class="taskbarhotro"> HỖ TRỢ </div>
+
+            <div class="maincuahotro">  
+                <!--tich diem -->      
+
+
+            </div>
+        </div>                  
+    </div>  
+
+
+
     <script>
         function clickpage(index) {
                 app.choose(index); 
@@ -118,8 +164,50 @@
         document.getElementById("overlaydonolineactive").onclick = function(){
             document.getElementById("overlaydonolineactive").style.display = "none";
         }
+        //tim don hang
+        document.getElementById("timdonhang").onclick = function(){
+            document.getElementById("overlaytimdonhangactive").style.display = "flex";
+        }
+        document.getElementById("overlaytimdonhangactive").onclick = function(){
+            document.getElementById("overlaytimdonhangactive").style.display = "none";
+        }
+        //tim san pham
+        document.getElementById("timsanpham").onclick = function(){
+            document.getElementById("overlaytimsanphamactive").style.display = "flex";
+        }
+        document.getElementById("overlaytimsanphamactive").onclick = function(){
+            document.getElementById("overlaytimsanphamactive").style.display = "none";
+        }
+        //ho tro
+        document.getElementById("hotro").onclick = function(){
+            document.getElementById("overlayhotroactive").style.display = "flex";
+        }
+        document.getElementById("overlayhotroactive").onclick = function(){
+            document.getElementById("overlayhotroactive").style.display = "none";
+        }
+        //xuat ra ten nhan vien va id 
+        function laytennhanvien(){
 
-        
+            let nameemployee = app.getname();
+
+            if(nameemployee != null){
+                document.getElementById("tennhanvienhien").innerHTML = nameemployee; 
+            }
+            else{
+                console.log("nameemployee is null");
+            }
+        }
+        function layidnhanvien(){
+            let idemployee = app.getid();
+
+            if(idemployee != null){
+                document.getElementById("idnhanvienhien").innerHTML = idemployee; 
+            }
+            else{
+                console.log("idemployee is null");
+            }
+         }
+   
     </script>
 </body>
 </html>

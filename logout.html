@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+          body{
              background-color: #f0f6fc;
             height: 100vh;
             margin: 0;
             display: grid;
-            grid-template-areas: "emty" 
-                                "text" 
-                                "mainboard";
+            grid-template-areas: "emty1 emty2" 
+                                "text text" 
+                                "mainboard mainboard";
             grid-template-rows: 110px 40px 1fr; 
         }
         .container {
@@ -73,11 +73,46 @@
             border-radius: 15px;
             z-index: -1; /* Đẩy ra sau chữ */
         }
-        
+        body .inforontotaskbar{
+    margin-top: 10px;
+    margin-left: 10px;
+    grid-area: emty1;
+    height: 80%;
+    width: 700px;
+
+    display: grid;
+    grid-template-areas: "time" "idnnhanvien" "tennhanvien";
+    grid-template-rows: 1.3fr 1fr 1fr;
+    justify-content: start;
+    align-items: center;
+}
+body .inforontotaskbar .time{
+    grid-area: time;
+    justify-self: center;
+    font-size: 20px;
+    font-family: arial;
+    font-weight: bold;
+
+    width: 300px;
+    height: 100%;
+
+    background-color: #005b9f;
+    border-radius: 10px;
+}
 
     </style>
 </head>
 <body>
+    <div class="inforontotaskbar">
+        <div class="time"></div>
+        <div class="idnnhanvien" style="font-size: 20px; font-weight: bold;">ID: 
+            <span id="idnhanvienhien"></span>
+        </div>
+        <div class="tennhanvien" style="
+              font-size: 20px; font-weight: bold;"
+            >Tên: <span id="tennhanvienhien"> </span></div>
+    </div>
+
     <div class="taskbar">
         <div class="choose" id="choose" style="visibility: hidden;"></div>
         <div class="choose" id="choose" style="visibility: hidden;"></div>
@@ -99,6 +134,27 @@
         function clickpage(index) {
                 app.choose(index); 
         }
+        function laytennhanvien(){
+
+            let nameemployee = app.getname();
+
+            if(nameemployee != null){
+                document.getElementById("tennhanvienhien").innerHTML = nameemployee; 
+            }
+            else{
+                console.log("nameemployee is null");
+            }
+        }
+        function layidnhanvien(){
+            let idemployee = app.getid();
+
+            if(idemployee != null){
+                document.getElementById("idnhanvienhien").innerHTML = idemployee; 
+            }
+            else{
+                console.log("idemployee is null");
+            }
+         }
     </script>
 </body>
 </html>
