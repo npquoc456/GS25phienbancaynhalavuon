@@ -65,10 +65,10 @@
         </div>
         <div class="vunghiensotien">
             <div class="containersotien">
-                <div class="totalinfor"> <span style="color: rgb(116, 116, 243);">TỔNG CỘNG:</span> <span></span></div>
-                <div class="totalinfor"><span style="color: rgb(163, 163, 2);">GIẢM GIÁ:</span></div>
+                <div class="totalinfor" style="color: rgb(116, 116, 243); font-size: 16px;"> <span >TỔNG CỘNG:</span> <span>0đ</span></div>
+                <div class="totalinfor" style="color: rgb(163, 163, 2); font-size: 16px;"><span>GIẢM GIÁ:</span> <span>0đ</span></div>
                 <div class="line"></div>
-                <div class="totalinfor"> <span style="color: red;">THÀNH TIỀN:</span></div>
+                <div class="totalinfor" style="color: red; font-size: 20px;" > <span>THÀNH TIỀN:</span> <Span>0đ</Span></div>
                 <button class="thanhtoanbtn"> THANH TOÁN</button>
             </div>
         </div>
@@ -99,6 +99,7 @@
             </div>
         </div>
     </div>
+    <!--tim hon hang -->
     <script>
         function clickpage(index) {
                 app.choose(index); 
@@ -110,13 +111,14 @@
         document.getElementById("overlaytichdiemactive").onclick = function(){
             document.getElementById("overlaytichdiemactive").style.display = "none";
         }
-
+        //don hang online
         document.getElementById("icononlinebill").onclick = function(){
             document.getElementById("overlaydonolineactive").style.display = "flex";
         }
         document.getElementById("overlaydonolineactive").onclick = function(){
             document.getElementById("overlaydonolineactive").style.display = "none";
         }
+
         
     </script>
 </body>

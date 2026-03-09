@@ -323,14 +323,7 @@
             grid-template-areas: "toptichdiem" "maintichdiem";
             grid-template-rows: 1fr 9fr;
         }
-            .overlaytichdiem .containertichdiem .taskbartichdiem {
-
-                background-color:#005b9f; 
-                border-radius: 20px 20px 0 0 ;
-                grid-area: toptichdiem;
-                width: 100%;
-                height: 100%;
-            }
+        
 .overlaydonoline {
     position: fixed;
     top: 0; 
@@ -355,11 +348,3 @@
             grid-template-areas: "toptichdiem" "maintichdiem";
             grid-template-rows: 1fr 9fr;
         }
-            .overlaydonoline .containerdonoline .taskbardonoline {
-
-                background-color:#005b9f; 
-                border-radius: 20px 20px 0 0 ;
-                grid-area: toptichdiem;
-                width: 100%;
-                height: 100%;
-            }
