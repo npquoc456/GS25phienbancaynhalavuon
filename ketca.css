@@ -7,6 +7,7 @@
                                 "text text" 
                                 "mainboard mainboard";
             grid-template-rows: 110px 40px 1fr; 
+            overflow: hidden;
         }
         .text {
             justify-self: center; 
@@ -170,7 +171,7 @@
 
                     }
                     .container .thongtinsotien2 .nutxacnhanbangke {
-                        margin-top: 30px;
+                        margin-top: 20px;
                         display: flex;
                         justify-content: space-between;
                         width: 60%;

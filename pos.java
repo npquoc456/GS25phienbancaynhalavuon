@@ -40,6 +40,8 @@ public class pos extends Application{
             switch(index) {
                 case "0":{
                     System.out.println("Đang đăng xuất!");
+                    nameemployee = null;
+                    idemployee = 0;
                     loadloginpage();
                     break;
                 }
