@@ -269,6 +269,7 @@
                     font-size: 20px;
                     font-family: arial;
                     font-weight: bold;
+                    
                 }
                 .container .vunghiensotien .containersotien .line{
                     justify-self: center;
@@ -298,6 +299,11 @@
                  .container .vunghiensotien .containersotien button.thanhtoanbtn:active{
                     transform: scale(1.06);
                  }
+                 .container .vunghiensotien .containersotien .totalinfor{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                }
 /*phan tich diem*/
 .overlaytichdiem {
     position: fixed;
@@ -309,7 +315,7 @@
     z-index: 3;
 
     /*toao bo cuc */
-    display: none ;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -322,6 +328,16 @@
             display: grid;
             grid-template-areas: "toptichdiem" "maintichdiem";
             grid-template-rows: 1fr 9fr;
+        }
+        .overlaytichdiem .containertichdiem .taskbartichdiem {
+            grid-area: toptichdiem;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            font-size: 28px; 
+            font-weight: bold; 
+            color: rgb(0, 0, 0);
+            font-family: arial;
         }
         
 .overlaydonoline {
@@ -348,3 +364,13 @@
             grid-template-areas: "toptichdiem" "maintichdiem";
             grid-template-rows: 1fr 9fr;
         }
+                .overlaydonoline .containerdonoline .taskbardonoline {
+                    grid-area: toptichdiem;
+                    display: flex; 
+                    justify-content: center; 
+                    align-items: center; 
+                    font-size: 28px; 
+                    font-weight: bold; 
+                    color: rgb(0, 0, 0);
+                    font-family: arial;
+                }
