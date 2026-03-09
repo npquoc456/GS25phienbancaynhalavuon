@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: grid; 
+        height: 100vh;
+
+        grid-template-areas: "header header header" 
+                             "left   main   right" 
+                             "bottom bottom bottom";
+
+    }
+    .container{
+        background-color: #D6E7EE;
+        grid-area: main;
+        min-height: 700px;
+        min-width: 1000px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logincontainer{
+        background-color: white;
+        width: 864px;
+        height: 556px;
+        border-radius: 20px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        box-shadow: 0 0  15px rgba(102, 102, 102, 0.6); 
+    }
+
+    .container .logincontainer img{
+        height: 520px;
+        width: 393px;
+
+        object-fit: cover; 
+        margin-top: 19px;
+        margin-left: 20px;
+        border-radius: 30px;
+
+    }
+    .container .login{
+        display: grid; 
+        grid-template-rows: 100px 1fr 100px 50px;
+    }
+    .login .logo{
+        font-family: Arial;
+        margin-top: 170px;
+        justify-self: center;
+        align-self: center;
+        font-size: 36px;
+        font-weight: bold;
+        color: #02457A ;
+
+    }
+
+    .login .detail {
+        margin-left: 30px;
+        justify-self: center;
+        align-self: center;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+    }
+
+    .login .detail input{
+        width: 392px;
+        height: 72px;
+        border-radius: 20px;
+        margin-top: -15px;
+
+        border-style: solid;
+        border-color: rgb(149, 151, 152);
+        font-size: 24px;
+        transition: 0.5s;
+    }
+    .login button{
+        width: 221px;
+        height: 52px;
+
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 50px;
+        border-radius: 17px;
+        border: none;
+
+        background-color: #02457A;
+        color: white;
+        font-size: 24px;
+        font-family: Arial;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+    .container .logincontainer .login .print {
+        justify-self: center; 
+        align-self: center;
+
+        margin-bottom: 70px;
+        font-size: 20px;
+        font-family: Arial;
+        font-weight: 700;
+        color: #af0000 ;
+    }
+    .login button:hover{
+        transform: scale(1.03);
+    }
+    .login button:active{
+        transform: scale(1.03);
+        background-color: #7d5d86;
+    }
+
+</style>
+<body>
+    <div class="container"> 
+        <div class="logincontainer">
+            <div class="login">
+                <p class="logo">LOGIN</p>
+                <div class="detail">
+
+                    <p class="Enter">Your ID</p>
+                    <input type="text" placeholder="   Enter Your ID" id="getid">
+
+                    <p class="Enter">Your Password</p>
+                    <input type="password" placeholder="  Enter Your Password" id="getpassword">
+
+                </div>
+                <button onclick="checkaccount()">LOGIN</button>
+                <p id ="result" class="print"></p>
+            </div>
+            <img src="e85db64f09db121b8f6db6adac4e8897.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        function checkaccount(){
+            var employeeID = document.getElementById("getid").value; 
+            var employeePass = document.getElementById("getpassword").value; 
+
+            var checked = app.checkedLogin(employeeID, employeePass); 
+
+            document.getElementById("result").innerHTML = checked; 
+        }
+    </script>
+</body>
+</html>
